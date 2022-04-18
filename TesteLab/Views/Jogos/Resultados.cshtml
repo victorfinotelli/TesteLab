@@ -1,0 +1,30 @@
+﻿@model TesteLab.Resultados
+
+@{
+    ViewBag.Title = "Resultados";
+}
+
+<h2>Resultados</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Pontos", "Create")
+</p>
+
+<p><h5><b>Jogos Realizados</b> de <b>@Html.DisplayFor(model => model.DataJogoMin)</b></h5></p>
+<p><h5> até <b>@Html.DisplayFor(model => model.DataJogoMin)</b></h5></p>
+
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+       <dd>
+            <!--Exibir informações da tela de Resultados-->
+            <h5>Jogos Disputados: <b>@Html.DisplayFor(model => model.JogosRealizados)</b></h5>
+            <h5>Total de pontos marcados na temporada: <b>@Html.DisplayFor(model => model.TotalPontos)</b></h5>
+            <h5>Média de pontos por jogo: <b>@Html.DisplayFor(model => model.MediaPontos)</b></h5>
+            <h5>Maior pontuação em um jogo: <b>@Html.DisplayFor(model => model.MaiorPontuacao)</b></h5>
+            <h5>Menor pontuação em um jogo: <b>@Html.DisplayFor(model => model.MenorPontuacao)</b></h5>
+            <h5>Quantidade de vezes que bateu o próprio recorde: <b>@Html.DisplayFor(model => model.Recordes)</b></h5>
+        </dd>
+    </dl>
+</div>
